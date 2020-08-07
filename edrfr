@@ -1,0 +1,96 @@
+local function CreateInstance(cls,props)
+local inst = Instance.new(cls)
+for i,v in pairs(props) do
+	inst[i] = v
+end
+return inst
+end
+	
+local SaBerGUI = CreateInstance('ScreenGui',{DisplayOrder=0,Enabled=true,ResetOnSpawn=true,Name='SaBerGUI', Parent=game.CoreGui})
+local MainFrm = CreateInstance('Frame',{Style=Enum.FrameStyle.Custom,Active=false,AnchorPoint=Vector2.new(0, 0),BackgroundColor3=Color3.new(0, 0, 0),BackgroundTransparency=0,BorderColor3=Color3.new(1, 1, 1),BorderSizePixel=1,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0.526693225, 0, 0.457391292, 0),Rotation=0,Selectable=false,Size=UDim2.new(0, 212, 0, 182),SizeConstraint=Enum.SizeConstraint.RelativeXY,Visible=true,ZIndex=1,Name = 'MainFrm',Parent = SaBerGUI})
+local Title = CreateInstance('TextLabel',{Font=Enum.Font.Code,FontSize=Enum.FontSize.Size18,Text='SABER SIMULATOR GUI',TextColor3=Color3.new(1, 1, 1),TextScaled=false,TextSize=18,TextStrokeColor3=Color3.new(0, 0, 0),TextStrokeTransparency=1,TextTransparency=0,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Center,TextYAlignment=Enum.TextYAlignment.Center,Active=false,AnchorPoint=Vector2.new(0, 0),BackgroundColor3=Color3.new(0, 0, 0),BackgroundTransparency=0,BorderColor3=Color3.new(1, 1, 1),BorderSizePixel=1,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0, 0, 0, 0),Rotation=0,Selectable=false,Size=UDim2.new(0, 212, 0, 30),SizeConstraint=Enum.SizeConstraint.RelativeXY,Visible=true,ZIndex=1,Name='Title',Parent = MainFrm})
+local AutoFarm = CreateInstance('TextButton',{Font=Enum.Font.SourceSans,FontSize=Enum.FontSize.Size14,Text='Auto Farm [OFF]',TextColor3=Color3.new(1, 1, 1),TextScaled=false,TextSize=14,TextStrokeColor3=Color3.new(0, 0, 0),TextStrokeTransparency=1,TextTransparency=0,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Center,TextYAlignment=Enum.TextYAlignment.Center,AutoButtonColor=true,Modal=false,Selected=false,Style=Enum.ButtonStyle.Custom,Active=true,AnchorPoint=Vector2.new(0, 0),BackgroundColor3=Color3.new(0, 0, 0),BackgroundTransparency=0,BorderColor3=Color3.new(1, 1, 1),BorderSizePixel=1,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0.0359079614, 0, 0.238316819, 0),Rotation=0,Selectable=true,Size=UDim2.new(0, 195, 0, 25),SizeConstraint=Enum.SizeConstraint.RelativeXY,Visible=true,ZIndex=1,Name='AutoFarm',Parent = MainFrm})
+local RemoteBuy = CreateInstance('TextButton',{Font=Enum.Font.SourceSans,FontSize=Enum.FontSize.Size14,Text='Remote Buy',TextColor3=Color3.new(1, 1, 1),TextScaled=false,TextSize=14,TextStrokeColor3=Color3.new(0, 0, 0),TextStrokeTransparency=1,TextTransparency=0,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Center,TextYAlignment=Enum.TextYAlignment.Center,AutoButtonColor=true,Modal=false,Selected=false,Style=Enum.ButtonStyle.Custom,Active=true,AnchorPoint=Vector2.new(0, 0),BackgroundColor3=Color3.new(0, 0, 0),BackgroundTransparency=0,BorderColor3=Color3.new(1, 1, 1),BorderSizePixel=1,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0.0359079614, 0, 0.426258743, 0),Rotation=0,Selectable=true,Size=UDim2.new(0, 195, 0, 25),SizeConstraint=Enum.SizeConstraint.RelativeXY,Visible=true,ZIndex=1,Name='RemoteBuy',Parent = MainFrm})
+local AutoCoin = CreateInstance('TextButton',{Font=Enum.Font.SourceSans,FontSize=Enum.FontSize.Size14,Text='Auto Coin [OFF]',TextColor3=Color3.new(1, 1, 1),TextScaled=false,TextSize=14,TextStrokeColor3=Color3.new(0, 0, 0),TextStrokeTransparency=1,TextTransparency=0,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Center,TextYAlignment=Enum.TextYAlignment.Center,AutoButtonColor=true,Modal=false,Selected=false,Style=Enum.ButtonStyle.Custom,Active=true,AnchorPoint=Vector2.new(0, 0),BackgroundColor3=Color3.new(0, 0, 0),BackgroundTransparency=0,BorderColor3=Color3.new(1, 1, 1),BorderSizePixel=1,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0.0359079614, 0, 0.615395606, 0),Rotation=0,Selectable=true,Size=UDim2.new(0, 195, 0, 25),SizeConstraint=Enum.SizeConstraint.RelativeXY,Visible=true,ZIndex=1,Name='AutoCoin',Parent = MainFrm})
+local Reload = CreateInstance('TextButton',{Font=Enum.Font.SourceSans,FontSize=Enum.FontSize.Size14,Text='Destroy GUI',TextColor3=Color3.new(1, 1, 1),TextScaled=false,TextSize=14,TextStrokeColor3=Color3.new(0, 0, 0),TextStrokeTransparency=1,TextTransparency=0,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Center,TextYAlignment=Enum.TextYAlignment.Center,AutoButtonColor=true,Modal=false,Selected=false,Style=Enum.ButtonStyle.Custom,Active=true,AnchorPoint=Vector2.new(0, 0),BackgroundColor3=Color3.new(0, 0, 0),BackgroundTransparency=0,BorderColor3=Color3.new(1, 1, 1),BorderSizePixel=1,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0.0359079614, 0, 0.802082896, 0),Rotation=0,Selectable=true,Size=UDim2.new(0, 195, 0, 25),SizeConstraint=Enum.SizeConstraint.RelativeXY,Visible=true,ZIndex=1,Name='Reload',Parent = MainFrm})
+
+-- Some var
+local newvar = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+local hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+-- Draggable Form:
+MainFrm.Active = true
+MainFrm.Draggable = true
+
+-- Loaded message
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "SaBerGUI Loaded";
+Text = "Enjoy this shitty GUI :DDDD";
+Duration = 5;
+})
+
+-- AutoFarm Function
+function AutoFarmXYZ()
+while AutoFarm.Text == "Auto Farm [ON]" do
+local Event = game:GetService("ReplicatedStorage").Events.Clicked
+Event:FireServer()
+wait(0.5)
+hum.CFrame = CFrame.new(-55,9999,47)
+wait(0.5)
+hum.CFrame = CFrame.new(-36,3,46)
+end
+end
+
+-- AutoFarm Button
+AutoFarm.MouseButton1Click:Connect(function()
+if AutoFarm.Text == "Auto Farm [OFF]" then
+AutoFarm.Text = "Auto Farm [ON]"
+AutoFarmXYZ()
+else
+AutoFarm.Text = "Auto Farm [OFF]"
+AutoFarmXYZ:Destroy()
+end
+end)
+
+-- RemoteBuy Button
+RemoteBuy.MouseButton1Click:Connect(function()
+hum.CFrame = CFrame.new(-6,2,11)
+wait(0,5)
+hum.CFrame = CFrame.new(newvar)
+end)
+
+-- AutoCoin Button
+AutoCoin.MouseButton1Click:Connect(function()
+if AutoCoin.Text == "Auto Coin [OFF]" then
+AutoCoin.Text = "Auto Coin [ON]"
+AutoCoinXYZ()
+else
+AutoCoin.Text = "Auto Coin [OFF]"
+AutoCoinXYZ:Destroy()
+end
+end)
+
+-- AutoCoin function
+function AutoCoinXYZ()
+while AutoCoin.Text == "Auto Coin [ON]" do
+while wait(2) do
+local plr = game.Players.LocalPlayer
+for i,v in pairs(game.Workspace.CoinsHolder:GetChildren()) do
+if v and plr.Character:FindFirstChild("HumanoidRootPart") and AutoCoin.Text == "Auto Coin [ON]" and v:IsA("MeshPart") then --may want to change meshpart to part if it's a part
+wait(0.2) --adjust this to whatever
+plr.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,1,0)
+end
+end
+end
+end
+end
+
+-- Destroy button.
+Reload.MouseButton1Click:Connect(function()
+SaBerGUI:Destroy()
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "SaBerGUI Destroyed.";
+Text = "Execute this script again to run SaBerGUI.";
+Duration = 5;
+})
+end)
